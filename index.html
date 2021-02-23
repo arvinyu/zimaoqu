@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ja" class="style-version-2" id="page_id_index_index">
+	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+		<meta charset="UTF-8">
+		<title>demo</title>
+		<meta name="description" content="HTML, CSS, JavaScript, PHP, Ruby">
+		<meta name="author" content="alex_yu">
+		<!-- <meta name="copyright" content="Copyright (C) alex_yu.com"> -->
+
+		<link rel="canonical" href="https://dotinstall.com/">
+		<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple_touch_icon_180x180.png">
+		<link rel="index" href="/">
+		<link rel="stylesheet" href="./css/cf.css">
+
+		<!-- <link rel="alternate" type="application/rss+xml" title="新着レッスンRSS" href="/lessons.rss">
+		<link rel="alternate" type="application/rss+xml" title="新着補足情報RSS" href="/lessons/knowledge.rss"> -->
+
+
+		<!--[if lt IE 9]>
+		<script src="/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" href="./css/bootstrap_328.css">
+		<link rel="stylesheet" href="./css/font-awesome.min.css">
+		<link rel="stylesheet" href="./css/dotinstall-icons.css">
+		<link rel="stylesheet" href="./css/github-gist.css">
+		<link rel="stylesheet" href="./css/dotinstall.css">
+		<link rel="stylesheet" href="./css/components.min.css">
+		<link rel="stylesheet" href="./css/normal-responsive.css">
+		<link rel="stylesheet" href="./css/package-201905.css">
+
+
+		<script src="./js/jquery-1.10.2.min.js"></script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','./js/analytics.js','ga');
+
+			ga('create', 'UA-26578182-1', 'dotinstall.com');
+
+
+			ga('require', 'displayfeatures');
+			ga('send', 'pageview');
+		</script>
+
+		<script src="./js/bootstrap_328.min.js"></script>
+		<script src="./js/underscore.js"></script>
+		<script src="./js/es6-promise.auto.min.js"></script>
+		<script src="./js/main.js"></script>
+		<script src="./js/bundle.min.js"></script>
+		<script src="./js/dotinstall.bundle.min.js"></script>
+
+		<!-- Open Graph -->
+		<meta property="og:title" content="ドットインストール">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://dotinstall.com/">
+		<meta property="og:description" content="HTML, CSS, JavaScript, PHP, Ruby">
+		<meta property="og:image" content="./img/og-image.png">
+		<meta property="og:locale" content="ja_JP">
+		<meta property="fb:admins" content="569511872">
+		<meta property="fb:app_id" content="128241633952367">
+
+		<!-- Twitter Cards -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@dotinstall">
+		<meta name="twitter:title" content="ドットインストール">
+		<meta name="twitter:description" content="HTML, CSS, JavaScript, PHP, Ruby">
+		<meta name="twitter:image" content="./img/og-image.png">
+
+	</head>
+
+	<body>
+		<div id="fb-root" style="display:none;"></div>
+		<div class="navbar navbar-fixed-top   dotinstall-normal-topbar" id="index_index_page">
+			<div class="navbar-inner">
+				<div id="topbar_inner_container" class="container wide ">
+					<h1 class="logo">
+						<a href="/"><span>观看3分钟的视频轻松学习</span></a>
+					</h1>
+
+					<ul class="nav" id="global_menu" style="position:relative;font-size:12px;">
+						<li class=" movable" data-menu-index="1"><a href="/lessons">课程清单</a></li>
+						<li class=" movable" data-menu-index="2"><a href="/premium"><span style="font-weight:bold;color:#f39800;">高级会员</span></a></li>
+						<li class=" movable" data-menu-index="3"><a href="/business">在企业中使用</a></li>
+						<li>
+							<form action="https://dotinstall.com/search" id="topbar_search" class="form pull-left enable-incremental-lesson-search" onsubmit="if ($(this).find('.q').val() === '') { return false; }">
+								<div class="input-append" style="padding:12px 0 0 0;">
+									<div class="btn-group">
+										<input type="text" style="font-size:12px;" placeholder="搜索" name="q" class="q" id="q_in_topbar" value="" autocomplete="off">
+										<input type="hidden" name="f" value="topbar">
+										<button type="submit" class="btn"><i class="icon-search"></i></button>
+									</div>
+								</div>
+								<div id="incremental"></div>
+							</form>
+						</li>
+					</ul><!-- /.nav -->
+
+				<ul class="nav pull-right topbar-right-nav" id="global_pulldown">
+					<li id="dropdown_of_login_btn" class="dropdown appended-to-btn">
+						<b class="caret"></b>
+						<a href="#" class="dropdown-toggle text-ellipsis" data-toggle="dropdown"></a>
+						<ul id="global_dropdown_menu" class="dropdown-menu"></ul>
+					</li><!-- /.dropdown -->
+
+					<li id="topbar_login_button">
+						<a class="btn btn-small lh24" href="https://dotinstall.com/login">
+							<i class="icon-user"></i> 登录
+						</a>
+					</li>
+				</ul><!-- /nav pull-right -->
+
+				<ul class="nav pull-right">
+					<li id="news_notification" title="運営からのお知らせ"
+					    class="di-dropdown di-dropdown-align-center di-dropdown-large topbar-notification  guest-user"
+					     data-one-time-token="ff8865467fab32f085f46185a55a2a3f3c06f68f8f99d0e2f17b5f6bee2dc532">
+						<a href="#" class="di-dropdown-toggle">
+							<i class="fa fa-bell"></i>
+						</a>
+						<section class="di-dropdown-menu disable-hover" id="news_notification_menu">
+							<header>
+								<h4>運営からのお知らせ</h4>
+							</header>
+
+							<div class="di-dropdown-menu-body">
+								<ul class="">
+									<li >
+										<span class="news-publish-date">2021/02/19</span>
+										<span class="news-new">NEW</span><p>
+										<a href="https://dotinstall.com/lessons/todo_app_fetch_php" target="_blank">今週は『PHPでTodo管理アプリを作ろう 非同期通信編』をリリースしました。</a>
+										</p>
+									</li>
+									<li >
+										<span class="news-publish-date">2021/02/03</span>
+										<span class="news-new">NEW</span><p>
+										<a href="https://dotinstall.com/lessons/basic_markdown_v3?" target="_blank">ブラウザだけで学べる『マークダウン記法入門』をリリースしました。</a>
+										</p>
+									</li>
+									<li >
+										<span class="news-publish-date">2021/01/20</span>
+										<span class="news-new">NEW</span><p>
+										<a href="https://dotinstall.com/lessons/todo_app_class_php" target="_blank">今週は『PHPでTodo管理アプリを作ろう クラス編』をリリースしました。</a>
+										</p>
+									</li>
+									<li >
+										<span class="news-publish-date">2020/12/22</span>
+										<span class="news-new">NEW</span><p>
+										<a href="https://dotinstall.com/lessons/todo_app_php_v4" target="_blank">今週は『PHPでTodo管理アプリを作ろう 関数編』をリリースしました。</a>
+										</p>
+									</li>
+									<li >
+										<span class="news-publish-date">2020/12/02</span>
+										<span class="news-new">NEW</span><p>
+										<a href="https://dotinstall.com/lessons/basic_githubpages" target="_blank">今週は『GitHub Pagesでウェブサイトを公開しよう』をリリースしました。</a>
+										</p>
+									</li>
+								</ul>
+							</div><!-- /.di-dropdown-menu-body -->
+							<footer>
+								<a href="/news">すべて見る</a>
+							</footer>
+						</section><!-- /.di-dropdown-menu -->
+					</li><!-- /#news_notification -->
+
+				</ul>
+
+				</div><!--/container -->
+			</div><!-- /navbar-inner -->
+		</div><!-- /navbar -->
+
+
+		<div class="top-hero-layout">
+			<div class="top-hero-container">
+				<div class="top-hero-lead-layout">
+					<div class="top-hero-lead">
+						<div class="top-service-message">
+							<img src="./img/top_service_message.png" width="266" height="62" alt="可以通过3分钟的视频掌握的编程学习服务">
+						</div><!-- /.top-service-message -->
+						<p class="top-lesson-summary">
+							提供<strong class="s14b">447</strong> 节课程
+							<strong class="s14b">6,735</strong> 个视频
+						</p>
+						<div class="top-hero-btn">
+							<div class="btn-border">
+								<a href="/signup" class="di-btn di-btn-info"
+							   onclick="ga('send', 'event', 'Button', 'Click', 'index/top/signup')">新注册（免费）</a>
+							</div><!-- /.btn-border -->
+						</div><!-- /.top-hero-btn -->
+						<a href="/lessons" class="go-to-lessons-no-signup"
+						   onclick="ga('send', 'event', 'Link', 'Click', 'index/top/no-signup')">查看课程列表而无需注册</a>
+					</div><!-- /.top-hero-lead-layout -->
+				</div><!-- /.top-hero-lead -->
+				<div class="top-hero-sp-image"></div>
+			</div><!-- /.top-hero-container -->
+		</div><!-- /.top-hero-layout -->
+
+		<section class="top-features">
+
+			<section class="top-feature">
+				<div class="container">
+					<div class="top-feature-text-layout">
+						<div class="top-feature-text">
+							<h2>观看3分钟的视频轻松学习</h2>
+							<div class="top-feature-desc">
+								所有课程均在3分钟内提供了视频。您可以使用清除时间轻松学习。当然，您也可以从智能手机观看它。
+							</div>
+							<div class="top-feature-img-sp">
+								<img src="./img/top-feature-3m.png" width="422" height="238" alt="">
+							</div><!-- /.top-feature-img-sp -->
+							<a href="/lessons/basic_html_v5" class="di-btn di-btn-info di-btn-expand di-btn-bordered">看看“第一个HTML”</a>
+							<div class="go-to-lessons-layout">
+								<a href="/lessons" class="go-to-lessons-no-signup">课程清单</a>
+							</div><!-- /.go-to-lessons-layout -->
+						</div><!-- /.top-feature-text -->
+					</div><!-- /.top-feature-text-layout -->
+					<div class="top-feature-img">
+						<img src="./img/top-feature-3m.png" width="422" height="238" alt="">
+					</div><!-- /.top-feature-img -->
+				</div><!-- /.container -->
+			</section>
+
+			<section class="top-feature">
+				<div class="container">
+					<div class="top-feature-text-layout">
+						<div class="top-feature-text">
+							<h2>丰富多样的课程</h2>
+							<div class="top-feature-desc">
+								提供447节课程和6,735个视频。它涵盖了广泛的领域，从如何创建主页，可以用浏览器玩的简单游戏，使用框架的Web服务到iOS / Android应用程序开发。
+							</div>
+							<div class="top-feature-img-sp">
+								<img src="./img/top-feature-lessons.png" width="422" height="238" alt="">
+							</div><!-- /.top-feature-img-sp -->
+							<a href="/lessons" class="di-btn di-btn-info di-btn-expand di-btn-bordered">查看课程列表</a>
+						</div><!-- /.top-feature-text -->
+					</div><!-- /.top-feature-text-layout -->
+					<div class="top-feature-img">
+					<img src="./img/top-feature-lessons.png" width="422" height="238" alt="">
+					</div><!-- /.top-feature-img -->
+				</div><!-- /.container -->
+			</section>
+
+			<section class="top-feature">
+				<div class="container">
+					<div class="top-feature-text-layout">
+						<div class="top-feature-text">
+							<h2>获得实践只是</h2>
+							<div class="top-feature-desc">
+								课程从准备开发环境开始。您可以获得可以在实践中立即使用的开发工具的知识和技术。
+							</div>
+							<div class="top-feature-img-sp">
+								<img src="./img/top-feature-env.png" width="422" height="238" alt="">
+							</div><!-- /.top-feature-img-sp -->
+							<a href="/lessons/basic_pcsetup_mac_v2" class="di-btn di-btn-info di-btn-expand di-btn-bordered">
+								从“准备HTML/CSS学习环境”开始</a>
+						</div><!-- /.top-feature-text -->
+					</div><!-- /.top-feature-text-layout -->
+					<div class="top-feature-img">
+					<img src="./img/top-feature-env.png" width="422" height="238" alt="">
+					</div><!-- /.top-feature-img -->
+				</div><!-- /.container -->
+			</section>
+
+			<section class="top-feature">
+				<div class="container">
+					<div class="top-feature-text-layout">
+						<div class="top-feature-text">
+							<h2>
+								问老师你不懂的事
+								<span class="premium-label">优质的</span>
+							</h2>
+							<div class="top-feature-desc">
+								如果您是高级会员，则可以问老师您在课程中不了解的内容。一位活跃的工程师将更仔细地解释本课程的要点。（*在试运行期间）
+							</div>
+							<div class="top-feature-img-sp">
+								<img src="./img/top-feature-q.png" width="422" height="238" alt="">
+							</div><!-- /.top-feature-img-sp -->
+							<a href="/premium" class="di-btn di-btn-info di-btn-expand di-btn-bordered">了解有关高级会员的更多信息</a>
+						</div><!-- /.top-feature-text -->
+					</div><!-- /.top-feature-text-layout -->
+					<div class="top-feature-img">
+					<img src="./img/top-feature-q.png" width="422" height="238" alt="">
+					</div><!-- /.top-feature-img -->
+				</div><!-- /.container -->
+			</section>
+
+		</section><!-- /.top-features -->
+
+		<section class="popular-lessons">
+			<div class="container">
+				<h2>热门课程</h2>
+				<div class="top-packages">
+
+					<div class="top-package-row package-info-box">
+						<div class="package-icon package-theme-icon package-theme-bgcolor-orange">
+							<a href="/lessons/website_html_v4"><img src="./img/box/app-orange.png" alt="实践！制作一个应用程序介绍页面"></a>
+						</div><!-- /.package-icon -->
+						<div class="package-detail">
+							<h3>
+								<a href="/lessons/website_html_v4">实践！制作一个应用程序介绍页面 <span class="s11">(全16回)</span></a>
+							</h3>
+							<p class="package-description">
+								在创建还与智能手机屏幕兼容的应用介绍页面时，您将学习实用的HTML / CSS技术。
+							</p>
+						</div><!-- /.package-detail -->
+						<span class="premium-label">优质的</span>
+					</div><!-- /.top-package-row -->
+
+					<div class="top-package-row package-info-box">
+						<div class="package-icon package-theme-icon package-theme-bgcolor-lime">
+							<a href="/lessons/basic_javascript_v4">
+								<img src="./img/box/js-lime.png" alt="第一个JavaScript ">
+							</a>
+						</div><!-- /.package-icon -->
+						<div class="package-detail">
+							<h3>
+								<a href="/lessons/basic_javascript_v4">
+									第一个JavaScript  <span class="s11">(全11回)</span>
+								</a>
+							</h3>
+							<p class="package-description">
+								我们将学习JavaScript的基本知识，这些JavaScript可以在制作简单游戏的同时操作浏览器。
+							</p>
+						</div><!-- /.package-detail -->
+					</div><!-- /.top-package-row -->
+
+					<div class="top-package-row package-info-box">
+						<div class="package-icon package-theme-icon package-theme-bgcolor-purple">
+							<a href="/lessons/basic_php_grammer">
+								<img src="./img/box/php-purple.png" alt="详细说明PHP基本语法">
+							</a>
+						</div><!-- /.package-icon -->
+						<div class="package-detail">
+							<h3>
+								<a href="/lessons/basic_php_grammer">
+									详细说明PHP基本语法 <span class="s11">(全34回)</span>
+								</a>
+							</h3>
+							<p class="package-description">
+								了解Web服务开发中经常使用的基本PHP语法。
+							</p>
+						</div><!-- /.package-detail -->
+						<span class="premium-label">优质的</span>
+					</div><!-- /.top-package-row -->
+
+					<div class="top-package-row package-info-box">
+						<div class="package-icon package-theme-icon package-theme-bgcolor-orange">
+							<a href="/lessons/basic_python_v4">
+								<img src="./img/box/python-orange.png" alt="第一个Python">
+							</a>
+						</div><!-- /.package-icon -->
+						<div class="package-detail">
+							<h3>
+								<a href="/lessons/basic_python_v4">
+									第一个Python <span class="s11">(全9回)</span>
+								</a>
+							</h3>
+							<p class="package-description">
+								您将学习Python的基础知识，它使您可以在编写简单游戏的同时使用简单代码编写程序。
+							</p>
+						</div><!-- /.package-detail -->
+						<span class="premium-label">优质的</span>
+					</div><!-- /.top-package-row -->
+
+					<div class="top-package-row package-info-box">
+						<div class="package-icon package-theme-icon package-theme-bgcolor-pink">
+							<a href="/lessons/basic_ruby_v4">
+								<img src="./img/box/ruby_pink.png" alt="第一名Ruby">
+							</a>
+						</div><!-- /.package-icon -->
+						<div class="package-detail">
+							<h3>
+								<a href="/lessons/basic_ruby_v4">
+									第一名Ruby <span class="s11">(全9回)</span>
+								</a>
+							</h3>
+							<p class="package-description">
+								我们将学习Ruby的基础知识，可以在编写简单游戏的同时用短代码直观地编写。
+							</p>
+						</div><!-- /.package-detail -->
+						<span class="premium-label">优质的</span>
+					</div><!-- /.top-package-row -->
+
+					<div class="top-package-row package-info-box">
+						<div class="package-icon package-theme-icon package-theme-bgcolor-violet">
+							<a href="/lessons/basic_unity_v2">
+								<img src="./img/box/unity-violet.png" alt="Unity简介">
+							</a>
+						</div><!-- /.package-icon -->
+						<div class="package-detail">
+							<h3>
+								<a href="/lessons/basic_unity_v2">
+									Unity简介 <span class="s11">(全26回)</span>
+								</a>
+							</h3>
+							<p class="package-description">
+								您将学习如何制作简单的游戏同时使用功能强大的游戏引擎Unity。
+							</p>
+						</div><!-- /.package-detail -->
+					</div><!-- /.top-package-row -->
+
+				</div><!-- /.top-packages -->
+
+				<div class="call-to-action-layout">
+					<div class="call-to-action">
+						<a href="/signup" class="di-btn di-btn-info"
+					   onclick="ga('send', 'event', 'Button', 'Click', 'index/bottom/signup')">新注册（免费）</a>
+					</div><!-- /.call-to-action -->
+					<a href="/lessons" class="go-to-lessons-no-signup"
+					   onclick="ga('send', 'event', 'Link', 'Click', 'index/bottom/no-signup')">查看课程列表而无需注册</a>
+				</div><!-- /.call-to-action-layout -->
+			</div><!-- /.container -->
+		</section><!-- /.popular-lessons -->
+
+		<section class="new-lessons">
+			<div class="container">
+
+				<h2>新课程</h2>
+
+				<div class="top-packages">
+					<div class="top-package-row package-info-box">
+						<div class="package-icon package-theme-icon package-theme-bgcolor-violet">
+							<a href="/lessons/todo_app_fetch_php">
+								<img src="./img/box/todo-violet.png" alt="[试用操作]让我们制作一个具有PHP异步通信[macOS版本]的Todo管理应用程序">
+							</a>
+						</div><!-- /.package-icon -->
+						<div class="package-detail">
+							<h3>
+								<a href="/lessons/todo_app_fetch_php">[试用操作]让我们制作一个具有PHP异步通信[macOS版本]的Todo管理应用程序<span class="s11">(全30回)</span></a>
+							</h3>
+							<p class="package-description">
+								我们将使用JavaScript异步通信重写在类版本中创建的Todo管理应用程序。
+							</p>
+						</div><!-- /.package-detail -->
+						<span class="premium-label">优质的</span>
+					</div><!-- /.top-package-row -->
+
+					<div class="top-package-row package-info-box">
+						<div class="package-icon package-theme-icon package-theme-bgcolor-purple">
+							<a href="/lessons/basic_markdown_v3">
+								<img src="./img/box/markdown-purple.png" alt="降价表示法简介"><
+								/a>
+						</div><!-- /.package-icon -->
+						<div class="package-detail">
+							<h3>
+								<a href="/lessons/basic_markdown_v3">降价表示法简介 <span class="s11">(全10回)</span></a>
+							</h3>
+							<p class="package-description">让我们看一下工程师经常使用的降价表示法。</p>
+						</div><!-- /.package-detail -->
+					</div><!-- /.top-package-row -->
+
+					<div class="top-package-row package-info-box">
+						<div class="package-icon package-theme-icon package-theme-bgcolor-violet">
+							<a href="/lessons/todo_app_class_php">
+								<img src="./img/box/todo-violet.png" alt="【[试用操作]让我们制作一个PHP类[macOS版本]的Todo管理应用程序">
+							</a>
+						</div><!-- /.package-icon -->
+						<div class="package-detail">
+							<h3>
+								<a href="/lessons/todo_app_class_php">【[试用操作]让我们制作一个PHP类[macOS版本]的Todo管理应用程序<span class="s11">(全14回)</span></a>
+							</h3>
+							<p class="package-description">我们将使用类重写在功能版本中创建的Todo管理应用程序。</p>
+						</div><!-- /.package-detail -->
+						<span class="premium-label">优质的</span>
+					</div><!-- /.top-package-row -->
+
+					<div class="top-package-row package-info-box">
+						<div class="package-icon package-theme-icon package-theme-bgcolor-purple">
+							<a href="/lessons/submarine_scratch">
+								<img src="./img/box/submarine-purple.png" alt="使用Scratch进行潜艇游戏">
+							</a>
+						</div><!-- /.package-icon -->
+						<div class="package-detail">
+							<h3>
+								<a href="/lessons/submarine_scratch">使用Scratch进行潜艇游戏。 <span class="s11">(全21回)</span></a>
+							</h3>
+							<p class="package-description">我们将使用Scratch制作一款潜水艇平稳发展的游戏。</p>
+						</div><!-- /.package-detail -->
+					</div><!-- /.top-package-row -->
+
+					<div class="top-package-row package-info-box">
+						<div class="package-icon package-theme-icon package-theme-bgcolor-violet">
+							<a href="/lessons/todo_app_php_v4">
+								<img src="./img/box/todo-violet.png" alt="[试用操作]让我们制作一个具有PHP Function [macOS版本]的Todo管理应用程序">
+							</a>
+						</div><!-- /.package-icon -->
+						<div class="package-detail">
+							<h3>
+								<a href="/lessons/todo_app_php_v4">[试用操作]让我们制作一个具有PHP Function [macOS版本]的Todo管理应用程序 <span class="s11">(全25回)</span></a>
+							</h3>
+							<p class="package-description">
+								在使用PHP和MySQL创建Todo管理应用程序时，您将学习Web服务开发的基础知识。
+							</p>
+						</div><!-- /.package-detail -->
+						<span class="premium-label">优质的</span>
+					</div><!-- /.top-package-row -->
+
+					<div class="top-package-row package-info-box">
+						<div class="package-icon package-theme-icon package-theme-bgcolor-blue">
+							<a href="/lessons/basic_githubpages">
+								<img src="./img/box/github-blue.png" alt="在GitHub Pages上发布您的网站">
+							</a>
+						</div><!-- /.package-icon -->
+						<div class="package-detail">
+						<h3>
+						<a href="/lessons/basic_githubpages">在GitHub Pages上发布您的网站 <span class="s11">(全11回)</span></a>
+						</h3>
+						<p class="package-description">让我们看看如何使用GitHub Pages发布网站。</p>
+						</div><!-- /.package-detail -->
+						<span class="premium-label">优质的</span>
+					</div><!-- /.top-package-row -->
+
+					<div class="top-package-row package-info-box">
+						<div class="package-icon package-theme-icon package-theme-bgcolor-orange">
+							<a href="/lessons/basic_scratch_v4">
+								<img src="./img/box/scratch-orange.png" alt="Scratch 3.0简介">
+							</a>
+						</div><!-- /.package-icon -->
+						<div class="package-detail">
+							<h3>
+								<a href="/lessons/basic_scratch_v4">Scratch 3.0简介 <span class="s11">(全19回)</span></a>
+							</h3>
+							<p class="package-description">
+								麻省理工学院开发的一种用于学习编程的语言。即使是初学者和孩子也可以轻松学习编程的概念。
+							</p>
+						</div><!-- /.package-detail -->
+					</div><!-- /.top-package-row -->
+
+					<div class="top-package-row package-info-box">
+						<div class="package-icon package-theme-icon package-theme-bgcolor-blue">
+							<a href="/lessons/pong_js_v2">
+								<img src="./img/box/pingpong-blue.png" alt="让我们用JavaScript做一个乒乓游戏">
+							</a>
+						</div><!-- /.package-icon -->
+						<div class="package-detail">
+							<h3>
+								<a href="/lessons/pong_js_v2">让我们用JavaScript做一个乒乓游戏 <span class="s11">(全16回)</span></a>
+							</h3>
+							<p class="package-description">
+								让我们看看如何使用Canvas制作一个简单的乒乓球游戏。
+							</p>
+						</div><!-- /.package-detail -->
+						<span class="premium-label">优质的</span>
+					</div><!-- /.top-package-row -->
+
+				</div><!-- /.top-packages -->
+
+				<div class="call-to-action-layout">
+				<div class="call-to-action">
+				<a href="/lessons/search" class="di-btn di-btn-info">按时间倒叙查看课程列表</a></div>
+				</div><!-- /.call-to-action -->
+				</div><!-- /.call-to-action-layout -->
+
+			</div><!-- /.container -->
+		</section><!-- /.new-lessons -->
+
+		<div id="footer" class="">
+			<div class="container wide ">
+				<div class="footer-inner-container">
+
+					<div class="footer-logo-contents footer-logo">
+						<img src="./img/footer-logo-vertical.png" width="143" height="96" alt="dotinstall">
+						<p>这是一项编程学习服务，您可以掌握3分钟的视频。您也想开始编程吗？</p>
+					</div><!-- /footer-contents -->
+
+					<div class="footer-links-contents">
+						<div class="footer-contents">
+							<h3>服务菜单</h3>
+							<ul>
+								<li><a href="/lessons">课程清单</a></li>
+								<li><a href="/premium">高级会员</a></li>
+								<li><a href="/business">公司牌照</a></li>
+								<li><a href="/news">管理层通知</a></li>
+								<li><a href="/guide">编程学习指南</a></li>
+								<li><a href="/help">帮助</a></li>
+							</ul>
+						</div><!-- /footer-contents -->
+
+						<div class="footer-contents">
+							<h3>使用之前</h3>
+							<ul>
+								<li><a href="/terms">服务条款</a></li>
+								<li><a href="/privacy">隐私政策</a></li>
+								<li><a href="https://company.dotinstall.com" target="_blank">经营公司信息</a></li>
+								<li><a href="https://company.dotinstall.com/recruit.html" target="_blank">就业信息</a></li>
+								<li><a href="https://note.com/dotinstall/n/nfc979e2683cb" target="_blank">关于教材的使用</a></li>
+								<li><a href="/contact">联系我们</a></li>
+							</ul>
+						</div><!-- /footer-contents -->
+
+						<div class="footer-contents">
+							<h3>学习支持工具</h3>
+							<ul>
+								<li><a href="http://blog.dotinstall.com/post/139045656660/dotinstallpane" target="_blank">Dotinstall Pane</a></li>
+							</ul>
+							<h3>社交媒体</h3>
+							<ul>
+								<li><a href="http://facebook.com/dotinstall">Facebook页面</a></li>
+								<li><a href="http://twitter.com/dotinstall">Twitter (@alex_yu)</a></li>
+								<li><a href="https://note.com/dotinstall">官方博客</a></li>
+							</ul>
+							<h3>更新信息</h3>
+							<ul class="rss">
+								<li><i class="fa fa-rss"></i> <a href="/lessons.rss"> 新课程RSS</a></li>
+								<li><i class="fa fa-rss"></i> <a href="/lessons/knowledge.rss">新增功能补充信息RSS</a></li>
+							</ul>
+						</div><!-- /footer-contents -->
+					</div><!-- /footer-links-contents -->
+
+				</div><!-- /footer-inner-container -->
+
+				<p class="copyright">
+					Copyright &copy; 2011-2021 dotinstall.com. All Rights Reserved.
+				</p>
+
+			</div><!-- /container -->
+
+		</div><!-- /footer -->
+
+		<script src="./js/packages_for_search.js"></script>
+
+
+		<!-- User Insight PCDF Code Start : dotinstall.com -->
+		<script type="text/javascript">
+		<!--
+		var _uic = _uic ||{}; var _uih = _uih ||{};_uih['id'] = 50397;
+		_uih['lg_id'] = '';
+		_uih['fb_id'] = '';
+		_uih['tw_id'] = '';
+		_uih['uigr_1'] = ''; _uih['uigr_2'] = ''; _uih['uigr_3'] = ''; _uih['uigr_4'] = ''; _uih['uigr_5'] = '';
+		_uih['uigr_6'] = ''; _uih['uigr_7'] = ''; _uih['uigr_8'] = ''; _uih['uigr_9'] = ''; _uih['uigr_10'] = '';
+		/* DO NOT ALTER BELOW THIS LINE */
+		/* WITH FIRST PARTY COOKIE */
+		(function() {
+		var bi = document.createElement('scri'+'pt');bi.type = 'text/javascript'; bi.async = true;
+		bi.src = ('https:' == document.location.protocol ? 'https://bs' : 'http://c') + '.nakanohito.jp/b3/bi.js';
+		var s = document.getElementsByTagName('scri'+'pt')[0];s.parentNode.insertBefore(bi, s);
+		})();
+		//-->
+		</script>
+		<!-- User Insight PCDF Code End : dotinstall.com -->
+
+		<!-- USERGRAM Attributes -->
+		<script type="text/javascript">
+		window.ugattr = window.ugattr || {};
+		ugattr['serviceId'] = '';
+		</script>
+		<!-- USERGRAM Attributes end -->
+
+		<!-- USERGRAM -->
+		<script type="text/javascript">
+		(function(){var a=window,b=document,c=a.usergram=a.usergram||[],d,e;
+		c.l||(c.s=(new Date()).getTime(),c.l=!0,d=b.getElementsByTagName('script')[0],
+		e=b.createElement('script'),e.type='text/javascript',e.async=true,
+		e.src='./js/usergram.js',d.parentNode.insertBefore(e,d))})();
+
+		window.usergram=window.usergram||[],window.ugattr=window.ugattr||{};
+		usergram.push(['send','UgoHy1-1','pv',ugattr]);
+		</script>
+		<!-- USERGRAM end -->
+
+
+		<script src="./js/jquery.circliful.min.js"></script>
+		<script src="./js/highlight.pack.js"></script>
+
+
+
+		<script>
+		$(function() {
+		    function adjustContentsWidth() {
+		    }
+
+		    function applyResponsive() {
+		        Dotinstall.responsive.topbar.apply(false);
+		    }
+
+		    $(window).on('resize', function() {
+		        applyResponsive();
+		    });
+
+		    applyResponsive();
+		});
+		</script>
+
+		<!--
+		<script>
+		$(function() {
+		  frameInFrame('./js/async.js');
+		});
+		</script>
+		-->
+	</body>
+</html>
